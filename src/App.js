@@ -3,6 +3,7 @@ import SubmitButton from "./components/SubmitButton";
 import DatePicker from "react-datepicker";
 import TotalPrice from './components/totalPrice'
 import "./App.css";
+import "react-datepicker/dist/react-datepicker.css";
 import moment from "moment";
 
 class App extends Component {
@@ -21,7 +22,9 @@ class App extends Component {
     this.setState({
       startDate: date
     });
-    console.log(date.format("L"));
+    if(date){
+    console.log(date.format("L"))
+    }
   };
 
   inputHandler = e => {
